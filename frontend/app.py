@@ -274,10 +274,14 @@ if st.button("🚀 Generate Document", type="primary"):
                 # --------------------------------------------------
 
                 else:
-
-                    st.error(
-                        f"Backend error: {response.status_code}"
-                    )
+                    if response.status_code == 503:
+                        st.warning(
+                            "Gemini is busy right now. Please wait a minute and try again."
+                        )
+                    else:
+                        st.error(
+                            f"Backend error: {response.status_code}"
+                        )
 
 
             # --------------------------------------------------
