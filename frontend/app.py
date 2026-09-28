@@ -91,7 +91,7 @@ if st.button("🚀 Generate Document", type="primary"):
             try:
 
                 response = requests.post(
-                    "https://legalease-yg44.onrender.com/generate",
+                   "https://legalease-9vn7.onrender.com/generate",
                     json={
                         "document_type": document_type,
                         "parties": parties,
